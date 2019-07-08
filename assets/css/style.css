@@ -1,0 +1,16 @@
+/*CSS styling for the game*/
+.crystalImg {
+    position: 150px;
+    width: 150px;
+    height: 150px;
+    margin: 6px;
+    float: left;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+}
+
+h3 {
+    color: blue;
+}
