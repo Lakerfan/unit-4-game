@@ -17,6 +17,18 @@ $(document).ready(function() {
                 crystalCollector.rnumber = Math.floor(Math.random() * 120) + 19;
                 $("#rnumber").html(crystalCollector.rnumber);
                 console.log("the computer random number is: " + crystalCollector.rnumber);
+
+                crystalCollector.crystal1 = Math.floor(Math.random() * 12) + 1;
+                console.log("crystal-1: " + crystalCollector.crystal1);
+
+                crystalCollector.crystal2 = Math.floor(Math.random() * 12) + 1;
+                console.log("crystal-2: " + crystalCollector.crystal2);
+
+                crystalCollector.crystal3 = Math.floor(Math.random() * 12) + 1;
+                console.log("crystal-3: " + crystalCollector.crystal3);
+
+                crystalCollector.crystal4 = Math.floor(Math.random() * 12) + 1;
+                console.log("crystal-4: " + crystalCollector.crystal4);
             }
         }
 });
