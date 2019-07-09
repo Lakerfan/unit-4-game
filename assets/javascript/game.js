@@ -37,12 +37,32 @@ $(document).ready(function() {
                 $("#wins").html(crystalCollector.wins);
                 $("#losses").html(crystalCollector.losses);
                 $("#totalScore").htnl(crystalCollector.totalScore);
-
+            },
+            //This will check which crystal was clicked and add a number value to each crystal
+            //As the above happens the wins and losses section will also be updated
                 crystalClick: function(event) {
+                //This jQuery event.target always refers to the element that triggered the event,
+                //where 'event' is the parameter passed to the function    
                 var crystalClick = event.trget.id;
                 crystalCollector.totalScore += crystalCollector[crystalClick];
                 $("#totalScore").html(crystalCollector.totalScore);
+
+                if(crystalCollector.totalScore === crystalCollector.rnumber){
+
+                    crystalCollector.wins++;
+                    $("#youLW").html("You Win!");
+                    crystalCollector.startGame();
                 }
-            }
-        }
+                else if(crystalCollector.totalScore > crystalCollector.rnumber){
+                    
+                    crystalCollector.losses++;
+                    $("#youLW").html("You Lose!");
+                    crystalCollector.startGame();
+
+                }
+            },
+        };
+        crystalCollector.startGame();
+
+        $('.crystalImg').click(crystalCollector.crystalClick);
 });
