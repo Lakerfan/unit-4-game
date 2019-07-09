@@ -29,6 +29,20 @@ $(document).ready(function() {
 
                 crystalCollector.crystal4 = Math.floor(Math.random() * 12) + 1;
                 console.log("crystal-4: " + crystalCollector.crystal4);
+
+                //This rests the score back to 0
+                crystalCollector.totalScore=0;
+
+                //This displays the current vlaue of the total score counter in the wins and losses
+                $("#wins").html(crystalCollector.wins);
+                $("#losses").html(crystalCollector.losses);
+                $("#totalScore").htnl(crystalCollector.totalScore);
+
+                crystalClick: function(event) {
+                var crystalClick = event.trget.id;
+                crystalCollector.totalScore += crystalCollector[crystalClick];
+                $("#totalScore").html(crystalCollector.totalScore);
+                }
             }
         }
 });
